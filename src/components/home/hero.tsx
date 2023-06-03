@@ -8,7 +8,7 @@ import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import CanvasComponent from '../3Dcontainer/Canvas'
-
+import { SxProps } from '@mui/system'
 interface Exp {
   label: string
   value: string
@@ -33,9 +33,14 @@ const exps: Array<Exp> = [
 ]
 
 const ExpItem: FC<ExpItemProps> = ({ item }) => {
+  const boxSx: SxProps = {
+    textAlign: 'center',
+    marginBottom: { xs: 1, md: 0 },
+  }
+
   const { value, label } = item
   return (
-    <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
+    <Box sx={boxSx}>
       <Typography
         sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
       >
@@ -49,8 +54,14 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
 }
 
 const HomeHero: FC = () => {
+  const boxSx: SxProps = {
+    backgroundColor: 'background.paper',
+    position: 'relative',
+    pt: 4,
+    pb: { xs: 8, md: 10 },
+  }
   return (
-    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="hero" sx={boxSx}>
       <Container maxWidth="lg">
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
           <Grid item xs={12} md={7}>

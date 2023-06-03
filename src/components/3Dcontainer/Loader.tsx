@@ -10,19 +10,21 @@ interface LoaderProps {
 const Loader: React.FC<LoaderProps> = ({ url }) => {
   const gltf = useLoader(GLTFLoader, url)
   const groupRef = useRef<THREE.Group>(null)
-  const mixerRef = useRef<THREE.AnimationMixer>(null)
+  const mixerRef = useRef<{ mixer: THREE.AnimationMixer | undefined }>({ mixer: undefined })
 
   useEffect(() => {
     if (gltf.animations && gltf.animations.length > 0) {
-      mixerRef.current = new THREE.AnimationMixer(gltf.scene)
-      const action = mixerRef.current.clipAction(gltf.animations[0])
+      const mixer = new THREE.AnimationMixer(gltf.scene)
+      const action = mixer.clipAction(gltf.animations[0])
       action.play() // Play the first animation, modify as needed
+      mixerRef.current.mixer = mixer
     }
   }, [gltf])
 
   useFrame((_, delta) => {
-    if (mixerRef.current) {
-      mixerRef.current.update(delta)
+    const mixer = mixerRef.current.mixer
+    if (mixer) {
+      mixer.update(delta)
     }
     if (groupRef.current) {
       groupRef.current.rotation.y += 0.01 // Example: Rotate the model
@@ -31,7 +33,7 @@ const Loader: React.FC<LoaderProps> = ({ url }) => {
 
   return (
     <group ref={groupRef}>
-      <primitive object={gltf.scene} position={[0, -2, 0]} />
+      <primitive object={gltf.scene} position={[-2, -2, -2]} />
     </group>
   )
 }
