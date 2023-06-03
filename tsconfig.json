@@ -22,3 +22,26 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     "lib": ["esnext", "dom"],
+//     "jsx": "preserve",
+//     "strict": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "allowJs": true,
+//     "noEmit": true,
+//     "incremental": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "paths": {
+//       "@/*": ["src/*"]
+//     }
+//   },
+//   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+//   "exclude": ["node_modules"]
+// }
