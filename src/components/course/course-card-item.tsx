@@ -6,19 +6,19 @@ import Typography from '@mui/material/Typography'
 import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
 import ArrowForward from '@mui/icons-material/ArrowForward'
 import { Course } from '@/interfaces/course'
-import { SxProps } from '@mui/system'
+
 interface Props {
   item: Course
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
-  const boxSx: SxProps = {
-    px: 1,
-    py: 4,
-  }
-
   return (
-    <Box sx={boxSx}>
+    <Box
+      sx={{
+        px: 1,
+        py: 4,
+      }}
+    >
       <Box
         sx={{
           p: 2,
