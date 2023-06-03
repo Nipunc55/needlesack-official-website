@@ -142,7 +142,7 @@ const HomeHero: FC = () => {
                   }
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 } }}>
+              {/* <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
                     Get Started
@@ -153,7 +153,7 @@ const HomeHero: FC = () => {
                     Watch Video
                   </StyledButton>
                 </ScrollLink>
-              </Box>
+              </Box> */}
             </Box>
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
@@ -187,7 +187,7 @@ const HomeHero: FC = () => {
                   '& img': { width: '32px !important', height: 'auto' },
                 }}
               >
-                <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
+                {/* <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} /> */}
               </Box>
               <Box>
                 <Typography
