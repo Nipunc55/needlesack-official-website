@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import CanvasComponent from '../3Dcontainer/Canvas'
 
 interface Exp {
   label: string
@@ -202,7 +203,8 @@ const HomeHero: FC = () => {
               </Box>
             </Box>
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
+              <CanvasComponent />
+              {/* <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" /> */}
             </Box>
           </Grid>
         </Grid>
