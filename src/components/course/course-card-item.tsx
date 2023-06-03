@@ -16,23 +16,25 @@ const CourseCardItem: FC<Props> = ({ item }) => {
     px: 1,
     py: 4,
   }
-  const boxSxChild: SxProps = {
-    p: 2,
-    backgroundColor: 'background.paper',
-    borderRadius: 4,
-    transition: (theme) => theme.transitions.create(['box-shadow']),
-    '&:hover': {
-      boxShadow: 2,
-      [`& .${iconButtonClasses.root}`]: {
-        backgroundColor: 'primary.main',
-        color: 'primary.contrastText',
-        boxShadow: 2,
-      },
-    },
-  }
+
   return (
     <Box sx={boxSx}>
-      <Box sx={boxSxChild}>
+      <Box
+        sx={{
+          p: 2,
+          backgroundColor: 'background.paper',
+          borderRadius: 4,
+          transition: (theme) => theme.transitions.create(['box-shadow']),
+          '&:hover': {
+            boxShadow: 2,
+            [`& .${iconButtonClasses.root}`]: {
+              backgroundColor: 'primary.main',
+              color: 'primary.contrastText',
+              boxShadow: 2,
+            },
+          },
+        }}
+      >
         <Box
           sx={{
             lineHeight: 0,
