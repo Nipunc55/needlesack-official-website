@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
-import Box from '@mui/material/Box'
+import { Box } from '@mui/material'
 
 import Typography from '@mui/material/Typography'
 import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
