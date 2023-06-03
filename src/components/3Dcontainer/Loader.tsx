@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useAnimations } from '@react-three/drei'
+
 import * as THREE from 'three'
 interface LoaderProps {
   url: string
