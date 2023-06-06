@@ -4,7 +4,8 @@ import Loader from './Loader'
 import { OrbitControls } from '@react-three/drei'
 const CanvasComponent: React.FC = () => {
   return (
-    <Canvas style={{ width: '775px', height: '750px' }}>
+    <Canvas style={{ height: '400px' }}>
+      {/* backgroundColor: 'white' */}
       <ambientLight intensity={0.5} />
       <OrbitControls
         maxPolarAngle={Math.PI / 2} // Limit rotation to 90 degrees (pi/2) on the X-axis

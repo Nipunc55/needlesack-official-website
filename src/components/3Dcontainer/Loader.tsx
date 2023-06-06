@@ -27,13 +27,13 @@ const Loader: React.FC<LoaderProps> = ({ url }) => {
       mixer.update(delta)
     }
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.01 // Example: Rotate the model
+      // groupRef.current.rotation.y += 0.01 // Example: Rotate the model
     }
   })
 
   return (
     <group ref={groupRef}>
-      <primitive object={gltf.scene} position={[-2, -2, -2]} />
+      <primitive object={gltf.scene} position={[-1, -3, -2]} />
     </group>
   )
 }

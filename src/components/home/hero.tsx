@@ -170,7 +170,7 @@ const HomeHero: FC = () => {
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Sertificate badge */}
-            <Box
+            {/* <Box
               sx={{
                 position: 'absolute',
                 bottom: 30,
@@ -199,7 +199,6 @@ const HomeHero: FC = () => {
                   '& img': { width: '32px !important', height: 'auto' },
                 }}
               >
-                {/* <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} /> */}
               </Box>
               <Box>
                 <Typography
@@ -212,7 +211,7 @@ const HomeHero: FC = () => {
                   There are certificates for all courses.
                 </Typography>
               </Box>
-            </Box>
+            </Box> */}
             <Box sx={{ lineHeight: 0 }}>
               <CanvasComponent />
               {/* <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" /> */}
@@ -222,13 +221,13 @@ const HomeHero: FC = () => {
 
         {/* Experience */}
         <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
-          <Grid container spacing={2}>
+          {/* <Grid container spacing={2}>
             {exps.map((item) => (
               <Grid key={item.value} item xs={12} md={4}>
                 <ExpItem item={item} />
               </Grid>
             ))}
-          </Grid>
+          </Grid> */}
         </Box>
       </Container>
     </Box>
