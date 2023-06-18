@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from './Loader'
 import { OrbitControls } from '@react-three/drei'
+import { PointLightHelper } from 'three'
 const CanvasComponent: React.FC = () => {
+  const lightRef = React.useRef()
   return (
     <Canvas style={{ height: '400px' }}>
       {/* backgroundColor: 'white' */}
@@ -13,8 +15,9 @@ const CanvasComponent: React.FC = () => {
         // ref={orbitRef}
         // target={center}
       />
-      <pointLight position={[10, 10, 10]} />
-      <Loader url="/3Dmodels/girl_gym_dance.gltf" />
+      <pointLight ref={lightRef} position={[-30, 5, -25]} />
+
+      <Loader url="/3Dmodels/mac.gltf" />
     </Canvas>
   )
 }
