@@ -121,7 +121,7 @@ const Loader = (props) => {
 					onClick={handleClick}>
 					<Html
 						wrapperClass='laptop'
-						position={[1.4, 1, 0.16]}
+						position={[1.4, 1.5, 0.2]}
 						transform
 						distanceFactor={1}
 						rotation={[-1.71, -1.25, -1.709]}>
