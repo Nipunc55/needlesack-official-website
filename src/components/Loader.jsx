@@ -13,6 +13,7 @@ import {
 	useTexture,
 } from '@react-three/drei';
 import '../App.css';
+import { animated, useSpring } from 'react-spring';
 const Loader = (props) => {
 	const [pointLightPos, setPointLightPos] = useState([4, 0, 4]);
 	const [center, setCenter] = useState([0, 0, 0]);
@@ -22,6 +23,16 @@ const Loader = (props) => {
 	const { camera } = useThree();
 	const gltf = useLoader(GLTFLoader, props.name.path);
 	const raycaster = new THREE.Raycaster();
+//animated position
+   // Define the target position
+  const targetPosition = [-0.5, -2, 3];
+
+  // Create an animated position using react-spring
+  const springProps = useSpring({
+    position: targetPosition,
+    config: { duration: 1000 }, // Animation duration in milliseconds
+  });
+
 
 	function getWorldPosition(child) {
 		const worldPosition = new THREE.Vector3().copy(child.position);
@@ -64,40 +75,27 @@ const Loader = (props) => {
 	 * get the center of clicked object
 	 * @param {*} event
 	 */
-	const handleClick = (event) => {
-		// // Calculate the center position of the clicked mesh
-		// const box = new THREE.Box3().setFromObject(mesh.current)
-		// const center = box.getCenter(new THREE.Vector3())
-
-		// // Set the center position state
-		// setCenter([center.x, center.y, center.z])
-		const { clientX, clientY } = event;
-		const x = (clientX / window.innerWidth) * 2 - 1;
-		const y = -(clientY / window.innerHeight) * 2 + 1;
-		const mouse = { x: x, y: y };
-		raycaster.setFromCamera(mouse, camera);
-		const intersects = raycaster.intersectObjects(mesh.current.children, true);
-		if (intersects.length > 0) {
-			const clickedObject = intersects[0].object;
-			if (clickedObject) {
-				const { name, position } = clickedObject;
-				props.onDataReceve(clickedObject);
-				setClickedObject(clickedObject);
-				//clickedObject.material.metalness = 1
-				console.log(name);
-				const worldPosition = new THREE.Vector3().copy(clickedObject.position);
-				clickedObject.parent.localToWorld(worldPosition);
-				if (name == 'dream-catcher') setCenter(worldPosition);
-			}
-		}
-	};
+	
 
 	//*********/
 	useFrame((state, delta) => {
 		// orbitRef.current.update();
-		// if (mesh.current) {
-		// 	mesh.current.update(delta);
-		// }
+		if (mesh.current) {
+			// mesh.current.update(delta);
+			if(props.animate){
+				const currentPosition = mesh.current.position;
+                const newPosition = currentPosition.clone();
+
+               // Increment position values by 0.1 on each frame update
+               
+
+				if( newPosition.z  <= 2) newPosition.z += 0.1;
+				mesh.current.position.set(newPosition.x, newPosition.y, newPosition.z);
+				//  mesh.current.position.set(props.name.position[0], props.name.position[1], props.name.position[2]);
+//  mesh.current.position.copy(springProps.position);
+			}
+			
+		}
 	});
 
 	return (
@@ -111,14 +109,14 @@ const Loader = (props) => {
 				ref={orbitRef}
 				target={center}
 			/> */}
-			<PresentationControls global polar={[-0.2, 0.2]} azimuth={[0, 0.2]}>
+			<PresentationControls global polar={[-0.2, 0.2]} azimuth={[-0.2, 0.4]}>
 				<primitive
 					ref={mesh}
 					rotation={props.name.rotation}
 					object={gltf.scene}
 					scale={props.name.scale}
 					position={props.name.position}
-					onClick={handleClick}>
+					>
 					<Html
 						wrapperClass='laptop'
 						position={[1.4, 1, -0.01]}

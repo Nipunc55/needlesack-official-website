@@ -17,6 +17,7 @@
 		"react-bootstrap": "^2.7.4",
 		"react-dom": "^18.2.0",
 		"react-scroll": "^1.8.7",
+		"react-spring": "^9.7.1",
 		"three": "^0.153.0"
 	},
 	"devDependencies": {
