@@ -12,7 +12,7 @@ import {
 	PresentationControls,
 	useTexture,
 } from '@react-three/drei';
-
+import '../App.css';
 const Loader = (props) => {
 	const [pointLightPos, setPointLightPos] = useState([4, 0, 4]);
 	const [center, setCenter] = useState([0, 0, 0]);
@@ -126,6 +126,7 @@ const Loader = (props) => {
 						distanceFactor={1}
 						rotation={[-1.71, -1.25, -1.709]}>
 						<iframe
+						    className='iframe-website'
 							src='https://needlesack.art/'
 							frameborder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'

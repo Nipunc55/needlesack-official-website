@@ -1,6 +1,7 @@
 /** @format */
 .canvas {
 	width: 100% !important;
+	background-color: aqua;
 }
 .app {
 	height: 90vh;
@@ -48,6 +49,7 @@ section {
 .laptop iframe {
 	width: 1120px;
 	height: 730px;
+	
 }
 /* section:nth-of-type(even) {
 	color: white;
@@ -58,3 +60,7 @@ section:nth-of-type(odd) {
 	color: black;
 	background: white;
 } */
+.iframe-website{
+	overflow: hidden;
+
+}

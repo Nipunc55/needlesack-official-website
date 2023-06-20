@@ -34,7 +34,7 @@ function App() {
 					</Canvas> */}
 			<NavBar />
 
-			<div className='w-100 m-1 d-flex flex-column flex-lg-row app'>
+			<div className='w-100 d-flex flex-column flex-lg-row app'>
 				<div className='w-100 '>
 					<Canvas alpha='true' className='canvas'>
 						<Loader name={lapTop} />
