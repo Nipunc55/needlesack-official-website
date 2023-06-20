@@ -90,9 +90,21 @@ const Loader = (props) => {
                
 
 				if( newPosition.z  <= 2) newPosition.z += 0.1;
+				
 				mesh.current.position.set(newPosition.x, newPosition.y, newPosition.z);
 				//  mesh.current.position.set(props.name.position[0], props.name.position[1], props.name.position[2]);
 //  mesh.current.position.copy(springProps.position);
+			}else{
+				const currentPosition = mesh.current.position;
+                const newPosition = currentPosition.clone();
+
+               // Increment position values by 0.1 on each frame update
+               
+
+				if( newPosition.z  >= 0) newPosition.z -= 0.1;
+				
+				mesh.current.position.set(newPosition.x, newPosition.y, newPosition.z);
+			
 			}
 			
 		}
