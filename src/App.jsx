@@ -82,10 +82,10 @@ function App() {
 
 				<div className='w-100 overflow-auto sections'>
 					<section>
+						
 						<h1>WHO WE ARE ?</h1>
-
-						<p>We are the Owners of 
-							<br/><span className="multiple-text" ref={el}></span></p>
+						<p>We are the Owners of </p>
+				<div>	<span className="multiple-text" ref={el}></span></div>
 					</section>
 					<section className='section-2'>
 						<div>
