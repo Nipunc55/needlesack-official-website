@@ -1,0 +1,26 @@
+.navBar{
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.navContainer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-left: 30%;
+    
+  }
+  .NavLink{
+    font-weight: 1000 !important;
+    font-size: 1.5rem !important;
+  }
+
+.Search_button{
+    background-color: blue !important;
+}
+
+@media screen and (max-width: 991px){
+    .navContainer {
+        padding-left: 0%;
+        
+      }
+}
