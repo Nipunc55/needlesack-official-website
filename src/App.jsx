@@ -1,5 +1,5 @@
 /** @format */
-import { useEffect, useState, useRef } from "react";
+
 //import { Canvas } from '@react-three/fiber';
 import './App.css';
 // import Loader from './components/Loader';
@@ -17,7 +17,7 @@ function App() {
 			<Section />
 		</>
 	);
-				}
+}
 			
 
 export default App;

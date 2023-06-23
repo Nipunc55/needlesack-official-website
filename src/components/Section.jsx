@@ -15,7 +15,8 @@ let lapTop = {
 
 function Sections() {
 	const [isScrollingUp, setIsScrollingUp] = useState(false);
-
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const scrollableRef = useRef(null);
 //   const animatedPosition = useSpring({
 //     position: lapTop.position, // Initial position
 //     config: { duration: 500 }, // Animation duration in milliseconds
@@ -44,20 +45,20 @@ function Sections() {
 
 
 	useEffect(() => {
-		const handleScroll = (event) => {
-			console.log(event.deltaY < 0);
-		
-			setIsScrollingUp(event.deltaY > 0);
-			
+		const handleScroll = () => {
+			const currentScrollPos = scrollableRef.current.scrollTop;
+		    
+			setIsScrollingUp(currentScrollPos > prevScrollPos);
+			 setPrevScrollPos(currentScrollPos);
 		};
 
-		window.addEventListener('wheel', handleScroll);
+		scrollableRef.current.addEventListener('scroll', handleScroll);
 
 		return () => {
-			window.removeEventListener('wheel', handleScroll);
+		scrollableRef.current.removeEventListener('scroll', handleScroll);
 		};
 	}, 
-	[]);
+	[prevScrollPos]);
 
 
 
@@ -76,7 +77,7 @@ function Sections() {
 				</div>
 
 {/* column 02 */}
-				<div className='w-100 overflow-auto sections'>
+				<div ref={scrollableRef} className='w-100 overflow-auto sections'>
 					<section>
 						
 						<h1>WHO WE ARE ?</h1>
