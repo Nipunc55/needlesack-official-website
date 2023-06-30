@@ -1,66 +1,63 @@
 /** @format */
 .canvas {
-	width: 100% !important;
-
+  width: 100% !important;
 }
 .app {
-	height: 90vh;
+  height: 90vh;
 }
 .fade-up {
-	opacity: 0;
-	transform: translateY(20px);
-	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .fade-up.visible {
-	opacity: 1;
-	transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section {
-	block-size: 100%;
-	display: flex;
-	flex-direction: column;
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .sections {
-	scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
-section{
-	padding: 50px;
-	background-color: rgba(255, 255, 255, 0.349);
+section {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.349);
 }
-
-.multiple-text{
-    color: rgb(19, 34, 122);
-    font-size: 3.5rem;
-    font-weight: 1000;
+.multiple-text {
+  color: rgb(19, 34, 122);
+  font-size: 3.5rem;
+  font-weight: 1000;
 }
 .sections h1 {
-	font-size: 3rem;
-	font-weight: 1000;
-	color:  rgb(19, 34, 122);
+  font-size: 3rem;
+  font-weight: 1000;
+  color: rgb(19, 34, 122);
 }
 .sections p {
-	font-size: 2rem;
-	font-weight: 500;
+  font-size: 2rem;
+  font-weight: 500;
 }
 /* Webkit-based browsers (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
-	width: 0.5em;
-	background-color: #f5f5f5;
+  width: 0.5em;
+  background-color: #f5f5f5;
 }
 section {
-	scroll-snap-align: start;
-	scroll-snap-stop: always;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .laptop iframe {
-	width: 1120px;
-	height: 730px;
-	
+  width: 1120px;
+  height: 730px;
 }
 /* section:nth-of-type(even) {
 	color: white;
@@ -71,25 +68,34 @@ section:nth-of-type(odd) {
 	color: black;
 	background: white;
 } */
-.iframe-website{
-	overflow: hidden;
-
+.iframe-website {
+  overflow: hidden;
+}
+.button-div {
+  background-color: rgb(19, 34, 122) !important;
+  color: #ffffff !important;
+}
+.card-div {
+  margin-bottom: 5px !important;
+  background-color: #e4e2e2 !important;
+  border-color: 5px solid rgb(19, 34, 122) !important;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 991px){
-.multiple-text{
+@media screen and (max-width: 991px) {
+  .multiple-text {
     font-size: 2.5rem;
     font-weight: 800;
-}
-section {
+  }
+  section {
     padding-top: 400px;
-}
-.sections h1 {
-	font-size: 2rem;
-	font-weight: 800;
-}
-.sections p {
-	font-size: 1.5rem;
-	font-weight: 400;
-}
+  }
+  .sections h1 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .sections p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 }
