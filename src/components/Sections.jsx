@@ -1,11 +1,12 @@
+import React from "react";
 import {useEffect, useState, useRef} from "react";
 import {Canvas} from "@react-three/fiber";
-import {Carousel} from "bootstrap";
 import Typed from "typed.js";
 import Loader from "./Loader";
 import "./Sections.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import MyCarousel from "./Carousel";
+import "animate.css";
 
 let lapTop = {
   position: [-0.5, -2, 0],
@@ -28,7 +29,7 @@ function Sections() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Real Tuk Racing"],
+      strings: ["Games", "3D Webdesign", "3D visualizations"],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
@@ -72,61 +73,66 @@ function Sections() {
 
         {/* column 02 */}
         <div className='w-100 overflow-auto sections'>
-          <section>
+          {/* Section01 start */}
+          <section className='section-1'>
             <h1>WHO WE ARE ?</h1>
             <p>We are the Creators of </p>
             <div>
-              {" "}
+              <h1 className='animate__animated animate__zoomIn animate__delay-2s animate__slower'>
+                Real Tuk Racing
+              </h1>
+            </div>
+          </section>
+
+          {/* Section2 start */}
+          <section className='section-2'>
+            <h2>What we do?</h2>
+
+            <div>
               <span className='multiple-text' ref={el}></span>
             </div>
           </section>
-          <section className='section-2'>
-            <div>
-              <h1>What we do?</h1>
-              <div
-                id='carouselExampleSlidesOnly'
-                className='carousel slide'
-                data-bs-ride='carousel'
-              >
-                <div className='carousel-inner'>
-                  <div className='carousel-item active'>
-                    <img
-                      src='https://ichef.bbci.co.uk/news/640/cpsprodpb/15951/production/_117310488_16.jpg'
-                      className='d-block w-100'
-                      alt='...'
-                    />
-                  </div>
-                  <div className='carousel-item'>
-                    <img
-                      src='https://st3.depositphotos.com/1064024/14272/i/450/depositphotos_142722813-stock-photo-heart-love-tree.jpg'
-                      className='d-block w-100'
-                      alt='...'
-                    />
-                  </div>
-                  <div className='carousel-item'>
-                    <img
-                      src='https://ichef.bbci.co.uk/news/640/cpsprodpb/15951/production/_117310488_16.jpg'
-                      className='d-block w-100'
-                      alt='...'
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
+          {/* Section3 start */}
           <section className='section-3'>
             <div>
-              <h1>slide 3</h1>
-              <p>
-                Yes, the query querySelectorAll('div') is correct. It is a
-                method in JavaScript that allows you to select multiple elements
-                on a web page based on a CSS selector. In this case, the
-                selector 'div' is used to select all the elements in the
-                document.
-              </p>
+              <h1>Contact Us</h1>
+              <form>
+                <div className='mb-3'>
+                  <label for='exampleInputEmail1' className='form-label'>
+                    Email address
+                  </label>
+                  <input
+                    type='email'
+                    className='form-control'
+                    id='exampleInputEmail1'
+                    aria-describedby='emailHelp'
+                    required
+                  />
+                  <div id='emailHelp' className='form-text'>
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div className='mb-3'>
+                  <label for='exampleInputPassword1' className='form-label'>
+                    Massage
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control'
+                    id='exampleInputMassage1'
+                    required
+                  />
+                </div>
+                <button type='submit' className='btn btn-secondery button-div'>
+                  Submit
+                </button>
+              </form>
             </div>
           </section>
-          <section className='section-4'>
+
+          {/* Section04 start */}
+          {/* <section className='section-4'>
             <div>
               <h1>slide 4</h1>
               <p>
@@ -137,8 +143,10 @@ function Sections() {
                 document.
               </p>
             </div>
-          </section>
-          <section className='section-5'>
+          </section> */}
+
+          {/* section05 start */}
+          {/* <section className='section-5'>
             <div>
               <h1>slide 5</h1>
               <p>
@@ -149,7 +157,7 @@ function Sections() {
                 document.
               </p>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </>
