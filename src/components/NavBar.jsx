@@ -14,14 +14,14 @@ export default function NavBar() {
 			{' '}
 			<Navbar expand='lg' className={styles.navBar}>
 				<Container fluid>
-					<Navbar.Brand href='#'>Navbar scroll</Navbar.Brand>
+					<Navbar.Brand href='#'>NeedlSack</Navbar.Brand>
 					<Navbar.Toggle aria-controls='navbarScroll' />
 					<Navbar.Collapse className={styles.navContainer}    id='navbarScroll'>
 					<Nav className={`${styles.navSubContainer} me-auto my-2 my-lg-0`} style={{ maxHeight: '100px' }} navbarScroll>
                     <Nav.Link className={styles.NavLink}  href='#action1'>Home</Nav.Link>
-                    <Nav.Link className={styles.NavLink}  href='#action2'>Link</Nav.Link>
+                    <Nav.Link className={styles.NavLink}  href='#action2'>Products</Nav.Link>
                     <Nav.Link className={styles.NavLink}  href='#'>
-                      Link
+                      ContactUS
                     </Nav.Link>
              </Nav>
 
