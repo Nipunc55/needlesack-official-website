@@ -18,10 +18,10 @@ export default function NavBar() {
 					<Navbar.Toggle aria-controls='navbarScroll' />
 					<Navbar.Collapse className={styles.navContainer}    id='navbarScroll'>
 					<Nav className={`${styles.navSubContainer} me-auto my-2 my-lg-0`} style={{ maxHeight: '100px' }} navbarScroll>
-                    <Nav.Link className={styles.NavLink}  href='#action1'>Home</Nav.Link>
-                    <Nav.Link className={styles.NavLink}  href='#action2'>Products</Nav.Link>
+                    <Nav.Link className={styles.NavLink}  href='/'>Home</Nav.Link>
+                    <Nav.Link className={styles.NavLink}  href='/games'>Games</Nav.Link>
                     <Nav.Link className={styles.NavLink}  href='#'>
-                      ContactUS
+                      Products
                     </Nav.Link>
              </Nav>
 

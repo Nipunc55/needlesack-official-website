@@ -1,0 +1,15 @@
+.card{
+    width: 18rem;
+    height: 18rem;
+    margin: 1rem;
+   
+    border-radius: 6px;
+    box-shadow: 0 0 5px #797979;
+    transition: all 0.3s ease-in-out;
+}
+.square-card-image,
+.square-card-video {
+    width: 18rem;
+    height: 18rem;  
+    object-fit: fill;
+}
