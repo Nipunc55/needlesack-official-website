@@ -2,17 +2,27 @@
 
 import { useState, useEffect, useRef } from 'react';
 import './GameLoader.css';
+import {
 
+  useLocation,
+} from 'react-router-dom'
 import Unity, { UnityContext } from 'react-unity-webgl';
 
-function GameLoader({gameId}) {
+function GameLoader() {
 	const [isLoaded, setLoaded] = useState(false);
 	const loadingBar = useRef(null);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
+  const gameName = queryParams.get('gameName');
+  const orientation = queryParams.get('orientation')
+	
+	
 	const unityContext = new UnityContext({
-		loaderUrl: '../Build/wheelgame.loader.js',
-		dataUrl: '../Build/wheelgame.data.unityweb',
-		frameworkUrl: '../Build/wheelgame.framework.js.unityweb',
-		codeUrl: '../Build/wheelgame.wasm.unityweb',
+		loaderUrl: `../Build/${gameName}/${gameName}.loader.js`,
+		dataUrl: `../Build/${gameName}/${gameName}.data.unityweb`,
+		frameworkUrl: `../Build/${gameName}/${gameName}.framework.js.unityweb`,
+		codeUrl: `../Build/${gameName}/${gameName}.wasm.unityweb`,
 	});
 
 	unityContext.on('progress', (progression) => {
@@ -47,8 +57,8 @@ function GameLoader({gameId}) {
 					</div>
 				)}
 				<>
-					<div id='unity-game' className='unity'>
-						<Unity className='unity-con' unityContext={unityContext} />
+					<div id='unity-game' className={`${orientation}`}>
+						<Unity className='unity-game' unityContext={unityContext} />
 					</div>
 				</>
 			</div>

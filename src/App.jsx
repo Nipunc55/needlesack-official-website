@@ -1,5 +1,5 @@
 /** @format */
-import React from "react";
+
 //import { Canvas } from '@react-three/fiber';
 import "./App.css";
 // import Loader from './components/Loader';
@@ -11,7 +11,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useParams,
+
 } from 'react-router-dom'
 
 
@@ -28,7 +28,7 @@ function App() {
         
          <Route path="/" exact element={<Sections />} />
          <Route path="/games" exact element={<Games />} />
-         <Route path="/game-loader/:gameId" exact element={<GameLoader />} />
+         <Route path="/game-loader" exact element={<GameLoader />} />
        </Routes>
       </Router>
      

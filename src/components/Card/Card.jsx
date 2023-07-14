@@ -2,7 +2,7 @@ import  { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Card.css';
 
-const SquareCard = ({ videoUrl, imageUrl ,gameId}) => {
+const SquareCard = ({ videoUrl, imageUrl ,gameId,gameName,orientation}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const navigate = useNavigate();
 
@@ -15,7 +15,14 @@ const SquareCard = ({ videoUrl, imageUrl ,gameId}) => {
     setIsPlaying(false);
   };
   const onClicked = () => {
-    navigate(`/game-loader/${gameId}`);
+    console.log("orientation",orientation);
+      const queryParams = new URLSearchParams();
+  queryParams.set('gameName', gameName);
+  queryParams.set('orientation', orientation);
+ const queryString = queryParams.toString();
+
+
+    navigate(`/game-loader?${queryString}`);
   }
 
   return (
