@@ -78,3 +78,10 @@
     height: 75vh;
   }
 }
+
+@media screen and (width: 640px) {
+  .portrait {
+    width: 150px;
+    height: 300px;
+  }
+}
