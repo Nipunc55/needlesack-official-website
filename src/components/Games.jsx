@@ -13,6 +13,11 @@ imageUrl:"https://i.ytimg.com/vi/EXj4qbYbFvQ/hqdefault.jpg",
 gameId:2,
 gameName:"airforce",
 orientation:"portrait"
+},{videoUrl:"../Videos/airforceGamePlay.mp4",
+imageUrl:"https://i.ytimg.com/vi/EXj4qbYbFvQ/hqdefault.jpg",
+gameId:3,
+gameName:"Build",
+orientation:"portrait"
 }]
 export default function Games() {
 
