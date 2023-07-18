@@ -23,7 +23,7 @@ function App() {
   return (
     <>
      <Router>
-      <NavBar />
+      {/* <NavBar /> */}
         <Routes>
         
          <Route path="/" exact element={<Sections />} />
