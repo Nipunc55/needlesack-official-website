@@ -63,9 +63,9 @@ function Sections() {
 						<Loader name={lapTop} />
 					</Canvas> */}
 
-      {/* column 01 */}
       <div className='w-100 d-flex flex-column flex-lg-row app'>
-        <div className='w-100 '>
+        {/* column 01 */}
+        <div className='w-100 laptop'>
           <Canvas alpha='true' className='canvas'>
             <Loader name={lapTop} animate={isScrollingUp} />
           </Canvas>{" "}
