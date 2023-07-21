@@ -17,18 +17,21 @@ import {
 
 import Games from "./components/Games";
 import GameLoader from "./components/Game/GameLoader";
+import Product from "./components/Products/Product";
 
 
 function App() {
   return (
     <>
      <Router>
-      {/* <NavBar /> */}
+      <NavBar />
         <Routes>
         
          <Route path="/" exact element={<Sections />} />
          <Route path="/games" exact element={<Games />} />
+
          <Route path="/game-loader" exact element={<GameLoader />} />
+         <Route path="/products" exact element={<Product />} />
        </Routes>
       </Router>
      
@@ -37,3 +40,4 @@ function App() {
 }
 
 export default App;
+ 
