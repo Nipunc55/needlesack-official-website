@@ -9,8 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
 
 let lapTop = {
-  position: [-0.5, -2, 0],
-  rotation: [-0, 1.4, 0.6],
+  position: [-1, -2, 0],
+  rotation: [-0, 1.6, 0.6],
   path: "./3Dmodels/mac_display.gltf",
   scale: 1.4,
   iframeSrc: "https://www.youtube.com/embed/7XgqJwMbczY",
@@ -63,16 +63,16 @@ function Sections() {
 						<Loader name={lapTop} />
 					</Canvas> */}
 
-      <div className='w-100 d-flex flex-column flex-lg-row app'>
+      <div className='w-100  app'>
         {/* column 01 */}
-        <div className='w-100 laptop'>
+        <div className='w-100 laptop  column-1' >
           <Canvas alpha='true' className='canvas'>
             <Loader name={lapTop} animate={isScrollingUp} />
           </Canvas>{" "}
         </div>
 
         {/* column 02 */}
-        <div className='w-100 overflow-auto sections'>
+        <div className='w-50 overflow-auto sections column-2' >
           {/* Section01 start */}
           <section className='section-1'>
             <h1>WHO WE ARE ?</h1>
