@@ -10,7 +10,7 @@ import "animate.css";
 
 let lapTop = {
   position: [-1, -2, 0],
-  rotation: [-0, 1.6, 0.6],
+  rotation: [0, 1.6, 0.7],
   path: "./3Dmodels/mac_display.gltf",
   scale: 1.4,
   iframeSrc: "https://www.youtube.com/embed/7XgqJwMbczY",
@@ -72,7 +72,7 @@ function Sections() {
         </div>
 
         {/* column 02 */}
-        <div className='w-50 overflow-auto sections column-2' >
+        <div className='overflow-auto sections column-2' >
           {/* Section01 start */}
           <section className='section-1'>
             <h1>WHO WE ARE ?</h1>
