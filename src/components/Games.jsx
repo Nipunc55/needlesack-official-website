@@ -8,13 +8,13 @@ gameId:1,
 gameName:"wheelgame",
 orientation:"landscape"
 }
-,{videoUrl:"../Videos/airforceGamePlay.mp4",
-imageUrl:"https://i.ytimg.com/vi/EXj4qbYbFvQ/hqdefault.jpg",
+,{videoUrl:"https://play-games.googleusercontent.com/vp/mp4/1280x720/xANWQb5cgvg.mp4",
+imageUrl:"https://play-lh.googleusercontent.com/OU2hCZUnoTuzXECIsyEncU0eiW8E0_6QDQxggppwp5iRxOZs_T2jyricqLanGIgaqt0=w240-h480-rw",
 gameId:2,
 gameName:"airforce",
 orientation:"portrait"
-},{videoUrl:"../Videos/airforceGamePlay.mp4",
-imageUrl:"https://i.ytimg.com/vi/EXj4qbYbFvQ/hqdefault.jpg",
+},{videoUrl:"https://play-games.googleusercontent.com/vp/mp4/1280x720/MxzBju5mgHQ.mp4",
+imageUrl:"https://play-lh.googleusercontent.com/NT-OSgIaYHcXakVJ83koTtly-TgbQDJSbt1JhHLIbakzkfb3Ynbc7qCpWLeCIRAwig=w240-h480-rw",
 gameId:3,
 gameName:"Build",
 orientation:"portrait"
