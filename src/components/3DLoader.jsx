@@ -44,7 +44,7 @@ const Loader3D = (props) => {
 						rotation={[0, 0, 0]}>
 						<iframe
 						    className='iframe-iphone'
-							src='https://www.wikipedia.org/'
+							src={props.url}
 							frameborder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 							allowfullscreen></iframe>
