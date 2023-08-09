@@ -15,7 +15,7 @@ const SquareCard = ({ videoUrl, imageUrl ,gameId,gameName,orientation}) => {
     setIsPlaying(false);
   };
   const onClicked = () => {
-    console.log("orientation",orientation);
+ 
       const queryParams = new URLSearchParams();
   queryParams.set('gameName', gameName);
   queryParams.set('orientation', orientation);

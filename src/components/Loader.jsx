@@ -129,10 +129,12 @@ const Loader = (props) => {
 					scale={props.name.scale}
 					position={props.name.position}
 					>
+						
 					<Html
 						wrapperClass='laptop'
 						position={[1.4, 1, -0.01]}
 						transform
+						
 						distanceFactor={1}
 						rotation={[-1.71, -1.26, -1.709]}>
 						<iframe

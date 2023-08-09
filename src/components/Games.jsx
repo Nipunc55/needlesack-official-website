@@ -17,7 +17,7 @@ orientation:"portrait"
 imageUrl:"https://play-lh.googleusercontent.com/NT-OSgIaYHcXakVJ83koTtly-TgbQDJSbt1JhHLIbakzkfb3Ynbc7qCpWLeCIRAwig=w240-h480-rw",
 gameId:3,
 gameName:"Build",
-orientation:"portrait"
+orientation:"landscape"
 }]
 export default function Games() {
 

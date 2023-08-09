@@ -1,3 +1,4 @@
+
 .navBar{
     background-color: rgb(255, 255, 255) !important;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -18,7 +19,9 @@
 .Search_button{
     background-color: blue !important;
 }
-
+.title{
+font-weight: 1000;
+}
 @media screen and (max-width: 991px){
     .navContainer {
         padding-left: 0%;

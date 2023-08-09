@@ -14,7 +14,7 @@ export default function NavBar() {
 			{' '}
 			<Navbar expand='lg' className={styles.navBar}>
 				<Container fluid>
-					<Navbar.Brand href='#'>NeedlSack</Navbar.Brand>
+					<Navbar.Brand className={styles.title} href='#'>GameHub</Navbar.Brand>
 					<Navbar.Toggle aria-controls='navbarScroll' />
 					<Navbar.Collapse className={styles.navContainer}    id='navbarScroll'>
 					<Nav className={`${styles.navSubContainer} me-auto my-2 my-lg-0`} style={{ maxHeight: '100px' }} navbarScroll>
