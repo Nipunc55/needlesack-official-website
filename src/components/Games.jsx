@@ -20,8 +20,8 @@ gameName:"Build",
 orientation:"landscape"
 },{videoUrl:"https://play-games.googleusercontent.com/vp/mp4/1280x720/IYyl4aWFoxU.mp4",
 imageUrl:"https://play-lh.googleusercontent.com/Uh6sK5HBkhdE_SJEa5wCcK3uzSQoVVe28GF9e5r7BNDSqb4Kfyp7tZMgzvSmg-HI=w240-h480-rw",
-gameId:3,
-gameName:"Build",
+gameId:4,
+gameName:"kartRace",
 orientation:"landscape"
 }]
 export default function Games() {
