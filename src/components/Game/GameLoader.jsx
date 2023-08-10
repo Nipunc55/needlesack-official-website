@@ -24,7 +24,12 @@ function GameLoader() {
 		frameworkUrl: `../Build/${gameName}/${gameName}.framework.js.unityweb`,
 		codeUrl: `../Build/${gameName}/${gameName}.wasm.unityweb`,
 	});
-
+     unityContext.on('GameInput',()=>{
+	 var inputElement = document.getElementById("user_id");
+    if (inputElement) {
+        inputElement.focus(); 
+    }
+	 })
 	unityContext.on('progress', (progression) => {
 		loadingBar.current.style.width = 100 * progression + '%';
 	});
@@ -59,7 +64,9 @@ function GameLoader() {
 				<>
 					<div id='unity-game' className={`${orientation}`}>
 						<Unity className='unity-game' unityContext={unityContext} />
+						<input type="text" id="user_id" name="user_id" className='d-none'></input>
 					</div>
+					
 				</>
 			</div>
 		</>

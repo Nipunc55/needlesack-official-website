@@ -27,15 +27,15 @@ const SquareCard = ({ videoUrl, imageUrl ,gameId,gameName,orientation}) => {
 
   return (
     <div
-      className="card"
+      className={`card `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={onClicked}
     >
       {isPlaying ? (
-        <video className="square-card-video" src={videoUrl} autoPlay loop muted />
+        <video className={`square-card-video card-${orientation}`} src={videoUrl} autoPlay loop muted />
       ) : (
-        <img className="square-card-image" src={imageUrl} alt="Card" />
+        <img className={`square-card-image `} src={imageUrl} alt="Card" />
       )}
     </div>
   );
