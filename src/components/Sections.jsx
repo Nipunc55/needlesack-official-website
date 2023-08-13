@@ -65,11 +65,11 @@ function Sections() {
 
       <div className='w-100  app'>
         {/* column 01 */}
-        <div className='w-100 laptop  column-1' >
+        {/* <div className='w-100 laptop  column-1' >
           <Canvas alpha='true' className='canvas'>
             <Loader name={lapTop} animate={isScrollingUp} />
           </Canvas>{" "}
-        </div>
+        </div> */}
 
         {/* column 02 */}
         <div className='overflow-auto sections column-2' >

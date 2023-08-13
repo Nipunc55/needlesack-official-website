@@ -35,7 +35,7 @@ const SquareCard = ({ videoUrl, imageUrl ,gameId,gameName,orientation}) => {
       {isPlaying ? (
         <video className={`square-card-video card-${orientation}`} src={videoUrl} autoPlay loop muted />
       ) : (
-        <img className={`square-card-image `} src={imageUrl} alt="Card" />
+        <img className={`square-card-image card-${orientation}`} src={imageUrl} alt="Card" />
       )}
     </div>
   );
