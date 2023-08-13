@@ -1,8 +1,9 @@
 
 .navBar{
-    background-color: rgb(255, 255, 255) !important;
+    background-color: var(--primary-color)!important;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    
 }
 .navContainer {
     display: flex; 
@@ -14,6 +15,7 @@
   .NavLink{
     font-weight: 1000 !important;
     font-size: 1.5rem !important;
+    color: var(--text-color) !important;
   }
 
 .Search_button{
@@ -21,6 +23,7 @@
 }
 .title{
 font-weight: 1000;
+color: var(--text-color) !important;
 }
 @media screen and (max-width: 991px){
     .navContainer {

@@ -29,7 +29,7 @@ function Sections() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Games", "3D Webdesign", "3D visualizations"],
+      strings: ["Quick Play, Endless Joy", "No Hassle, All Game.", "Instant Fun, No Downloads Required."],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
@@ -75,18 +75,18 @@ function Sections() {
         <div className='overflow-auto sections column-2' >
           {/* Section01 start */}
           <section className='section-1'>
-            <h1>WHO WE ARE ?</h1>
-            <p>We are the Creators of </p>
+            <h1>Gaming Made Effortless, Always Online.</h1>
+            <p>Web Games: Play Anytime, Anywhere.</p>
             <div>
-              <h1 className='animate__animated animate__zoomIn animate__delay-2s animate__slower'>
-                Real Tuk Racing
+              <h1 className='animate__animated animate__zoomIn animate__delay-2s animate__slower title'>
+              We Are GameHUB
               </h1>
             </div>
           </section>
 
           {/* Section2 start */}
           <section className='section-2'>
-            <h2>What we do?</h2>
+            <h2>Why online games?</h2>
 
             <div>
               <span className='multiple-text' ref={el}></span>
@@ -109,7 +109,7 @@ function Sections() {
                     aria-describedby='emailHelp'
                     required
                   />
-                  <div id='emailHelp' className='form-text'>
+                  <div id='emailHelp' className=' form-label'>
                     We'll never share your email with anyone else.
                   </div>
                 </div>

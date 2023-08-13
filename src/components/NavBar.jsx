@@ -20,9 +20,9 @@ export default function NavBar() {
 					<Nav className={`${styles.navSubContainer} me-auto my-2 my-lg-0`} style={{ maxHeight: '100px' }} navbarScroll>
                     <Nav.Link className={styles.NavLink}  href='/'>Home</Nav.Link>
                     <Nav.Link className={styles.NavLink}  href='/games'>Games</Nav.Link>
-                    <Nav.Link className={styles.NavLink}  href='/products'>
+                    {/* <Nav.Link className={styles.NavLink}  href='/products'>
                       Products
-                    </Nav.Link>
+                    </Nav.Link> */}
              </Nav>
 
 					</Navbar.Collapse>
