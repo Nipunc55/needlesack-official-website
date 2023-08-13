@@ -12,13 +12,18 @@ body {
 }
 :root {
 	/* theme 1 */
-  /* --primary-color: #26292B;
+ /*  --primary-color: #26292B;
   --secondary-color: #2E3239;
   --accent-color: #5F7ADB;
    --text-color: #e2e6f8; */
    /* theme 2 */
-    --primary-color: #1B2223;
+    /* --primary-color: #1B2223;
   --secondary-color: #3A4F50;
   --accent-color: #0EF6cc;
-   --text-color: #F4FEFD;
+   --text-color: #F4FEFD; */
+   /* theme 3 */
+   --primary-color: #1A1C22;
+  --secondary-color: #3D3A50;
+  --accent-color: #3855be;
+   --text-color: #F7F7F7;
 }
