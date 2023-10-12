@@ -23,16 +23,15 @@ const Loader = (props) => {
 	const { camera } = useThree();
 	const gltf = useLoader(GLTFLoader, props.name.path);
 	const raycaster = new THREE.Raycaster();
-//animated position
-   // Define the target position
-  const targetPosition = [-0.5, -2, 3];
+	//animated position
+	// Define the target position
+	const targetPosition = [-0.5, -2, 3];
 
-  // Create an animated position using react-spring
-  const springProps = useSpring({
-    position: targetPosition,
-    config: { duration: 1000 }, // Animation duration in milliseconds
-  });
-
+	// Create an animated position using react-spring
+	const springProps = useSpring({
+		position: targetPosition,
+		config: { duration: 1000 }, // Animation duration in milliseconds
+	});
 
 	function getWorldPosition(child) {
 		const worldPosition = new THREE.Vector3().copy(child.position);
@@ -75,38 +74,33 @@ const Loader = (props) => {
 	 * get the center of clicked object
 	 * @param {*} event
 	 */
-	
 
 	//*********/
 	useFrame((state, delta) => {
 		// orbitRef.current.update();
 		if (mesh.current) {
 			// mesh.current.update(delta);
-			if(props.animate){
+			if (props.animate) {
 				const currentPosition = mesh.current.position;
-                const newPosition = currentPosition.clone();
+				const newPosition = currentPosition.clone();
 
-               // Increment position values by 0.1 on each frame update
-               
+				// Increment position values by 0.1 on each frame update
 
-				if( newPosition.z  <= 2) newPosition.z += 0.1;
-				
+				if (newPosition.z <= 2) newPosition.z += 0.1;
+
 				mesh.current.position.set(newPosition.x, newPosition.y, newPosition.z);
 				//  mesh.current.position.set(props.name.position[0], props.name.position[1], props.name.position[2]);
-//  mesh.current.position.copy(springProps.position);
-			}else{
+				//  mesh.current.position.copy(springProps.position);
+			} else {
 				const currentPosition = mesh.current.position;
-                const newPosition = currentPosition.clone();
+				const newPosition = currentPosition.clone();
 
-               // Increment position values by 0.1 on each frame update
-               
+				// Increment position values by 0.1 on each frame update
 
-				if( newPosition.z  >= 0) newPosition.z -= 0.1;
-				
+				if (newPosition.z >= 0) newPosition.z -= 0.1;
+
 				mesh.current.position.set(newPosition.x, newPosition.y, newPosition.z);
-			
 			}
-			
 		}
 	});
 
@@ -127,17 +121,16 @@ const Loader = (props) => {
 					rotation={props.name.rotation}
 					object={gltf.scene}
 					scale={props.name.scale}
-					position={props.name.position}
-					>
+					position={props.name.position}>
 					<Html
 						wrapperClass='laptop'
-						position={[1.4, 1, -0.01]}
+						position={[1.4, 1.5, -0.01]}
 						transform
 						distanceFactor={1}
 						rotation={[-1.71, -1.25, -1.709]}>
 						<iframe
-						    className='iframe-website'
-							src='https://needlesack.art/'
+							className='iframe-website'
+							src={props.name.iframeSrc}
 							frameborder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 							allowfullscreen></iframe>
